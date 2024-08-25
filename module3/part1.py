@@ -35,8 +35,8 @@ sales_tax = round(SALES_TAX_PERCENT * food_charge / 100.00, 2)  # round value to
 print(f"Sales Tax: ${sales_tax:,.2f} ({SALES_TAX_PERCENT}%)")  # comma separated to 2 decimal places
 
 # calculate the service charge
-service_charge = round(SERVICE_CHARGE_PERCENT * (food_charge + sales_tax) / 100.00, 2) # round value to two decimal places
-print(f"Gratuity: ${service_charge:,.2f} ({SERVICE_CHARGE_PERCENT}%)")  # comma separated to 2 decimal places
+service_charge = round(SERVICE_CHARGE_PERCENT * (food_charge + sales_tax) / 100.00, 2)  # round value to two decimal places
+print(f"Service Charge: ${service_charge:,.2f} ({SERVICE_CHARGE_PERCENT}%)")  # comma separated to 2 decimal places
 
 # calculate the final amount
 total_charge = food_charge + sales_tax + service_charge
