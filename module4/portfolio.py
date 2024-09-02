@@ -17,7 +17,7 @@ def read_int(min_value):
                 raise Exception
             return value
         except:
-            print(f"input must be at least {min_value}. Please try again: ")
+            print(f"Input must be at least {min_value}. Please try again: ")
 
 
 def read_float(min_value):
@@ -28,12 +28,11 @@ def read_float(min_value):
                 raise Exception
             return value
         except:
-            print(f"input must be at least {min_value}. Please try again: ")
+            print(f"Input must be at least {min_value}. Please try again: ")
 
 
 class ItemToPurchase:
     def __init__(self):
-        self.item_name = None
         self.item_name = "none"
         self.item_price = 0.0
         self.item_quantity = 0
@@ -51,7 +50,7 @@ class ItemToPurchase:
 
 # create a list up front. This allows the remainder of the code to be agnostic about the number of items we ask for.
 # it will also allow us to avoid a lot of repeated code which is generally undesirable.
-# finally, it allows us to employ some powerful mapping techniques when we go to calculate the total cost.
+# Finally, it allows us to employ some powerful mapping techniques when we go to calculate the total cost.
 items = [ItemToPurchase(), ItemToPurchase()]
 
 # using enumerate allows us to iterate over the items and also get the index which we need to print the item number.
@@ -72,7 +71,7 @@ for item in items:
 
 # here we see that the decision to use a list is paying off since we can reduce a lot of looping code
 # and concentrate on the business logic of generating the total cost
-# To calculate the total cost, we simply need to "map" each item to its cost and them sum over all the costs.
+# To calculate the total cost, we simply need to "map" each item to its cost and then sum over all the costs.
 # Python has a built-in map function for this purpose. We pass in the cost instance method,
 # and the map function will apply the method to each item in the list
 # This results in a list of floats which we then sum.
