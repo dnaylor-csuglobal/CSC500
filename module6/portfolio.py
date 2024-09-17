@@ -72,7 +72,7 @@ def print_menu(shopping_cart):
     while choice != 'q':
         print("MENU")
         print("a - Add item to cart")
-        print("r - remove item from cart")
+        print("r - Remove item from cart")
         print("c - Change item quantity")
         print("i - Output items' descriptions")
         print("o - Output shopping cart")
